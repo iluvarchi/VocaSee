@@ -1,6 +1,7 @@
 # VocaSee
 VocaSee is a Voice-Guided Indoor Object Finder Android Application for Visually Impaired Users. 
-The Android application code is made by [Cyrelle Kristin Gapit](https://github.com/tunasai/Vocasee). 
+
+The Android application code for our thesis was made by [Cyrelle Kristin Gapit](https://github.com/tunasai/Vocasee). 
 
 The ***data preprocessing folder*** contains the python scripts used to prepare the dataset.
 
@@ -10,9 +11,15 @@ The ***yolo26n folder*** contains the weights and default training settings of t
 
 ## Dataset Information
 
-A custom dataset was used for this project consisting of researcher-taken images captured under varying lighting conditions and was combined with supplementary images from Kaggle and Roboflow Universe. The dataset was split into **70% train, 20% validation and 10% test** and **80% train, 10% validation and 10% test** sets. 
+A custom dataset was used for this project consisting of researcher-taken images captured under varying lighting conditions and was combined with supplementary images from Kaggle and Roboflow Universe. 
 
-All YOLO Nano models were trained using this dataset with the following default YOLO configurations: images were resized to 640×640, a batch size of 16 was used, and training was conducted for 100 epochs. The experimentation of this project is conducted through the data splitting, epoch changes (150 epoch retraining on the best model), and model results comparison (to choose model for epoch retraining and select which model for deployment in the Android application).
+Most images were taken in portrait and objects were mostly centered in the frame. However, we also included images that were in landscape and objects that are not located in the center of the frame.
+
+The dataset was split into **70% train, 20% validation and 10% test** and **80% train, 10% validation and 10% test** sets. 
+
+All YOLO Nano models were trained using this dataset with the following default YOLO configurations: images were resized to 640×640, a batch size of 16 was used, and training was conducted for 100 epochs. 
+
+The experimentation of this project is conducted through the data splitting, epoch changes (150 epoch retraining on the best model), and model results comparison (to choose model for epoch retraining and select which model for deployment in the Android application).
 
 > [!NOTE]
 > **The data listed on the table below is the final dataset classes and image counts** <br>
@@ -52,9 +59,9 @@ The dataset includes the following:
 <br>
 
 > [!IMPORTANT]
-> **body scrub class is not to be confused with skin care moisturizing products. body scrubs in this context means body scrubbers used to clean (usually the back) the body. <br>
+> **body scrub class is not to be confused with skin care moisturizing products. Body scrubs in this context means body scrubbers used to clean (usually the back) the body. <br>
 > headset class includes headphones as well as earphones and earbuds. <br>
-> In the total composition of the dataset images, 50 partially occluded images were included hence why the number of images were 300 per class like before.**
+> In the total composition of the dataset images, 50 partially occluded images were also included but the images stay 300 images per class.**
 
 ## Data Split Image Distributions
 **70% Train, 20% Valid, 10% Test Data Split**
@@ -78,7 +85,11 @@ The dataset includes the following:
 > The test split of both data splits contain the same images. As for training settings, the args.yaml file is the same for all models (see the yolo26n folder).
 
 ## Data Sources
-We used our own custom images as well as the supplementary data sources below.
+We used our own images as well as the supplementary data sources below.
+
+| Researcher Taken Images | Supplementary Images |
+|-------------|--------------|
+|5,476|1,724|
 
 ### Supplementary Data Sources
 1. [Body Scrub from the Roboflow Universe Platform by @red-spong](https://universe.roboflow.com/red-spong/sponge-kl0nz)
