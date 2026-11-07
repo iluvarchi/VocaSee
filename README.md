@@ -129,7 +129,7 @@ We used our own images as well as the supplementary data sources below.
 > It was originally hosted in Google Colab before downloaded in a local machine. The file can be imported back into Google Colab for
 > model training using Google Colab's GPUs.**
 
-## Tech Stack
+## What we used for the project
 1. LabelImg v1.8.1 for Image Annotations
 2. Python v3.12.13 from Google Colab
 3. Ultralytics YOLO Nano versions
